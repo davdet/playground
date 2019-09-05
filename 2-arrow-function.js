@@ -15,15 +15,15 @@
 
 // console.log(squareArrowShorthand(9))
 
-const event={
+const event = {
     name: 'Birthday party',
     guestList: ['Davide', 'Lurid Gengiv', 'Opa'],
     //ES6 syntax for normal function
-    printGuestList(){
+    printGuestList() {
         console.log('Guest list for ' + this.name)
-        
+
         //Here I use an arrow function because I don't want it to have its own 'this', but instead being able to access the 'this' of printGuestList
-        this.guestList.forEach((guest)=>{
+        this.guestList.forEach((guest) => {
             console.log(guest + ' is attending ' + this.name)
         })
     }

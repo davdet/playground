@@ -7,12 +7,12 @@
 // const ObjectID=mongodb.ObjectID
 
 //Versione alternativa dei tre comandi precedenti, utilizzando la destrutturazione dell'oggetto 'mongodb'.
-const{MongoClient, ObjectID}=require('mongodb')
+const { MongoClient, ObjectID } = require('mongodb')
 
 //Definizione dell'URL di connessione al database.
-const connectionURL='mongodb://127.0.0.1:27017'
+const connectionURL = 'mongodb://127.0.0.1:27017'
 //Definizione del nome del database (una volta definito, MongoDB lo creerà automaticamente se non già presente).
-const databaseName='task-manager'
+const databaseName = 'task-manager'
 
 // //Creazione di una variabile che chiama la funzione ObjectID (proprietà di mongodb) per creare un nuovo ID.
 // const id=new ObjectID()
@@ -20,13 +20,13 @@ const databaseName='task-manager'
 // console.log(id.toHexString().length)
 
 //Funzione per connettersi al db: il primo argomento è l'indirizzo di connessione al db, il secondo è necessario per parsare correttamente l'url, il terzo è una funzione di callback che verrà chiamata una volta che siamo effettivamente connessi al db. Quest'ultima restituisce un errore (error) se non è stato possibile effettuare la connessione al db o un client (client) nel caso la connessione abbia funzionato. 
-MongoClient.connect(connectionURL, {useNewUrlParser: true}, (error, client)=>{
-    if(error){
+MongoClient.connect(connectionURL, { useNewUrlParser: true }, (error, client) => {
+    if (error) {
         return console.log('Unable to connect to database.')
     }
 
     //Creazione di un riferimento al db che si intende manipolare
-    const db=client.db(databaseName)
+    const db = client.db(databaseName)
 
     ///************DELETE************/
     // //deleteMany ha come argomento un oggetto che contiene i criteri di ricerca.
@@ -122,7 +122,7 @@ MongoClient.connect(connectionURL, {useNewUrlParser: true}, (error, client)=>{
     //     console.log(tasks)
     // })
 
-    
+
     // /************CREATE************/
     // //Identificazione della collezione che si intende manipolare e inserimento di un documento in tale collezione.
     // db.collection('users').insertOne({

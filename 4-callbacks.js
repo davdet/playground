@@ -13,7 +13,7 @@
 //             latitude: 0,
 //             longitude: 0
 //         }
-    
+
 //         callback(data)
 //     }, 2000)
 // }
@@ -31,9 +31,9 @@
 // 4. Test your work!
 
 //Funzione che prende in ingresso 2 numeri ed una funzione di callback, e restituisce la somma dei due numeri in maniera asincrona.
-const add=(firstNumber, secondNumber, callback)=>{
-    setTimeout(()=>{
-        const sum=firstNumber+secondNumber
+const add = (firstNumber, secondNumber, callback) => {
+    setTimeout(() => {
+        const sum = firstNumber + secondNumber
         callback(sum)
         //Alternativamente alle due linee precedenti si può utilizzare il seguente comando.
         //callback(firstNumber+secondNumber)

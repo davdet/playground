@@ -1,1 +1,5 @@
-{"name":"Piorch","planet":"Earth","age":"35"}
+{
+    "name": "Piorch",
+    "planet": "Earth",
+    "age": "35"
+}

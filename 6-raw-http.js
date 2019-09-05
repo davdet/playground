@@ -1,8 +1,8 @@
-const https = require ('https')
+const https = require('https')
 
 const url = 'https://api.darksky.net/forecast/064d310fec0ddf6cb213bdcc84fd00ac/40,-75?units=si'
 
-const request = https.request (url, (response) => {
+const request = https.request(url, (response) => {
     let data = ''
 
     response.on('data', (chunk) => {
